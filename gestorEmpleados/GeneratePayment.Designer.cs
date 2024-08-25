@@ -28,12 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form2";
+            generatePaymentTitle = new Label();
+            generatePaymentQuantityLabel = new Label();
+            generatePaymentQuantityTextbox = new TextBox();
+            generatePaymentButton = new Button();
+            SuspendLayout();
+            // 
+            // generatePaymentTitle
+            // 
+            generatePaymentTitle.AutoSize = true;
+            generatePaymentTitle.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
+            generatePaymentTitle.ForeColor = SystemColors.ControlLight;
+            generatePaymentTitle.Location = new Point(51, 30);
+            generatePaymentTitle.Name = "generatePaymentTitle";
+            generatePaymentTitle.Size = new Size(173, 35);
+            generatePaymentTitle.TabIndex = 2;
+            generatePaymentTitle.Text = "Generar Pago";
+            // 
+            // generatePaymentQuantityLabel
+            // 
+            generatePaymentQuantityLabel.AutoSize = true;
+            generatePaymentQuantityLabel.ForeColor = Color.Snow;
+            generatePaymentQuantityLabel.Location = new Point(67, 86);
+            generatePaymentQuantityLabel.Name = "generatePaymentQuantityLabel";
+            generatePaymentQuantityLabel.Size = new Size(135, 20);
+            generatePaymentQuantityLabel.TabIndex = 3;
+            generatePaymentQuantityLabel.Text = "Ingrese la cantidad";
+            // 
+            // generatePaymentQuantityTextbox
+            // 
+            generatePaymentQuantityTextbox.Location = new Point(77, 121);
+            generatePaymentQuantityTextbox.Name = "generatePaymentQuantityTextbox";
+            generatePaymentQuantityTextbox.Size = new Size(125, 27);
+            generatePaymentQuantityTextbox.TabIndex = 4;
+            // 
+            // generatePaymentButton
+            // 
+            generatePaymentButton.Location = new Point(89, 169);
+            generatePaymentButton.Name = "generatePaymentButton";
+            generatePaymentButton.Size = new Size(94, 29);
+            generatePaymentButton.TabIndex = 5;
+            generatePaymentButton.Text = "Submit";
+            generatePaymentButton.UseVisualStyleBackColor = true;
+            // 
+            // GeneratePayment
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(18, 18, 18);
+            ClientSize = new Size(282, 311);
+            Controls.Add(generatePaymentButton);
+            Controls.Add(generatePaymentQuantityTextbox);
+            Controls.Add(generatePaymentQuantityLabel);
+            Controls.Add(generatePaymentTitle);
+            Name = "GeneratePayment";
+            Text = "Form2";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label generatePaymentTitle;
+        private Label generatePaymentQuantityLabel;
+        private TextBox generatePaymentQuantityTextbox;
+        private Button generatePaymentButton;
     }
 }
