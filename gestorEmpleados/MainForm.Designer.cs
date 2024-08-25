@@ -107,6 +107,7 @@
             paySalaryButton.TabIndex = 6;
             paySalaryButton.Text = "Generar pago";
             paySalaryButton.UseVisualStyleBackColor = true;
+            paySalaryButton.Click += paySalaryButton_Click;
             // 
             // MainForm
             // 
