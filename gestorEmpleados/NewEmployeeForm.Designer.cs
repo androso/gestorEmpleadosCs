@@ -126,6 +126,7 @@
             Controls.Add(newEmployeeTitle);
             Name = "NewEmployeeForm";
             Text = "Form1";
+            Load += NewEmployeeForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

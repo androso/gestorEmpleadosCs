@@ -16,5 +16,15 @@ namespace gestorEmpleados
         {
             InitializeComponent();
         }
+
+        private void NewEmployeeForm_Load(object sender, EventArgs e)
+        {
+            newEmpSeniorityCombobox.Items.AddRange([
+                "Junior",
+                "Mid",
+                "Senior"
+                ]);
+            newEmpSeniorityCombobox.SelectedIndex = 0;
+        }
     }
 }
