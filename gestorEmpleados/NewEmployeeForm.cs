@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EmployeeManagementLibrary.Models;
 
 namespace gestorEmpleados
 {
     public partial class NewEmployeeForm : Form
     {
-        public NewEmployeeForm()
+        private EmployeeManagement employeeManagement;
+        public NewEmployeeForm(EmployeeManagement employeeManagement)
         {
             InitializeComponent();
+            this.employeeManagement = employeeManagement;
+
         }
 
         private void NewEmployeeForm_Load(object sender, EventArgs e)
@@ -25,6 +29,7 @@ namespace gestorEmpleados
                 "Senior"
                 ]);
             newEmpSeniorityCombobox.SelectedIndex = 0;
+            newEmpSeniorityCombobox.SelectedItem = "Junior";
         }
 
         private void newEmpFullNameTextbox_Validating(object sender, CancelEventArgs e)
@@ -42,6 +47,24 @@ namespace gestorEmpleados
                 ValidationErrorProvider.SetError(newEmpFullNameTextbox, "");
                 fullNameErrorLabel.Text = "";
             }
+        }
+
+        private void newEmpSubmitButton_Click(object sender, EventArgs e)
+        {
+            string fullname = newEmpFullNameTextbox.Text;
+            string seniority = newEmpSeniorityCombobox.SelectedItem.ToString();
+            DateTime birthdate = newEmpBirthDateDateTimePicker.Value;
+            
+            Employee employee = new Employee
+            {
+                FullName = fullname,
+                Seniority = seniority,
+                BirthDate = birthdate
+            };
+            employeeManagement.AddEmployee(employee);
+
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

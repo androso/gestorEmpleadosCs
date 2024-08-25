@@ -114,6 +114,7 @@
             newEmpSubmitButton.TabIndex = 9;
             newEmpSubmitButton.Text = "Submit";
             newEmpSubmitButton.UseVisualStyleBackColor = true;
+            newEmpSubmitButton.Click += newEmpSubmitButton_Click;
             // 
             // ValidationErrorProvider
             // 
