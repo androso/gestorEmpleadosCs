@@ -24,8 +24,8 @@ namespace gestorEmpleados
             {
                 employeesListBox.Items.Clear();
                 employeesListBox.Items.AddRange(employeeManagement.GetAllEmployees().ToArray());
-                employeesListBox.SelectedIndex = 0;
-                employeesListBox.SelectedItem = employeesListBox.Items[0];
+                 employeesListBox.SelectedIndex = 0;
+            employeesListBox.SelectedItem = employeesListBox.Items[0];
             }
         }
 
@@ -42,6 +42,12 @@ namespace gestorEmpleados
             employeeManagement.DeleteEmployee(selectedEmployee);
             employeesListBox.Items.Clear();
             employeesListBox.Items.AddRange(employeeManagement.GetAllEmployees().ToArray());
+        }
+
+        private void viewEmployeeButton_Click(object sender, EventArgs e)
+        {
+            Employee selectedEmployee = (Employee)employeesListBox.SelectedItem;
+            MessageBox.Show($"ID: {selectedEmployee.Id}\nNombre: {selectedEmployee.FullName}\nFecha de nacimiento: {selectedEmployee.BirthDate}\nAntigüedad: {selectedEmployee.Seniority}", "Información del empleado", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

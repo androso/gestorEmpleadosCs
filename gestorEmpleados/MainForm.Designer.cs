@@ -89,6 +89,7 @@
             viewEmployeeButton.TabIndex = 4;
             viewEmployeeButton.Text = "Ver empleado";
             viewEmployeeButton.UseVisualStyleBackColor = true;
+            viewEmployeeButton.Click += viewEmployeeButton_Click;
             // 
             // deleteEmployeeButton
             // 
