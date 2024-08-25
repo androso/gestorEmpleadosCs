@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementUI", "gestorEmpleados\EmployeeManagementUI.csproj", "{3FD5633A-B8F5-440B-A447-2681F9671840}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManagementLibrary", "EmployeeManagementLibrary\EmployeeManagementLibrary.csproj", "{898E1E37-32FB-4484-850D-691F337020C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FD5633A-B8F5-440B-A447-2681F9671840}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FD5633A-B8F5-440B-A447-2681F9671840}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FD5633A-B8F5-440B-A447-2681F9671840}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FD5633A-B8F5-440B-A447-2681F9671840}.Release|Any CPU.Build.0 = Release|Any CPU
+		{898E1E37-32FB-4484-850D-691F337020C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{898E1E37-32FB-4484-850D-691F337020C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{898E1E37-32FB-4484-850D-691F337020C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{898E1E37-32FB-4484-850D-691F337020C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5992323E-D2BF-4C53-9007-B888A5BB5568}
+	EndGlobalSection
+EndGlobal
