@@ -24,6 +24,8 @@ namespace gestorEmpleados
             {
                 employeesListBox.Items.Clear();
                 employeesListBox.Items.AddRange(employeeManagement.GetAllEmployees().ToArray());
+                employeesListBox.SelectedIndex = 0;
+                employeesListBox.SelectedItem = employeesListBox.Items[0];
             }
         }
 
