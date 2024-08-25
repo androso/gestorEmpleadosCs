@@ -79,6 +79,7 @@
             newEmployeeButton.TabIndex = 3;
             newEmployeeButton.Text = "Nuevo empleado";
             newEmployeeButton.UseVisualStyleBackColor = true;
+            newEmployeeButton.Click += newEmployeeButton_Click;
             // 
             // viewEmployeeButton
             // 
@@ -107,7 +108,7 @@
             paySalaryButton.Text = "Generar pago";
             paySalaryButton.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -120,7 +121,7 @@
             Controls.Add(employeesListBox);
             Controls.Add(listingLabel);
             Controls.Add(programTitleLabel);
-            Name = "Form1";
+            Name = "MainForm";
             Text = "Form1";
             ResumeLayout(false);
             PerformLayout();
