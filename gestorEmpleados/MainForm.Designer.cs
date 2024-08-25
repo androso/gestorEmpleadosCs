@@ -98,6 +98,7 @@
             deleteEmployeeButton.TabIndex = 5;
             deleteEmployeeButton.Text = "Eliminar empleado";
             deleteEmployeeButton.UseVisualStyleBackColor = true;
+            deleteEmployeeButton.Click += deleteEmployeeButton_Click;
             // 
             // paySalaryButton
             // 

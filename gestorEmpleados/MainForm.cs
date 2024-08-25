@@ -33,5 +33,13 @@ namespace gestorEmpleados
             GeneratePayment generatePaymentForm = new GeneratePayment(employee);
             generatePaymentForm.ShowDialog();
         }
+
+        private void deleteEmployeeButton_Click(object sender, EventArgs e)
+        {
+            Employee selectedEmployee = (Employee)employeesListBox.SelectedItem;
+            employeeManagement.DeleteEmployee(selectedEmployee);
+            employeesListBox.Items.Clear();
+            employeesListBox.Items.AddRange(employeeManagement.GetAllEmployees().ToArray());
+        }
     }
 }

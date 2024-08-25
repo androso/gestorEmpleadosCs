@@ -55,5 +55,11 @@ namespace EmployeeManagementLibrary.Models
         {
             return employees;
         }
+        
+        public void DeleteEmployee(Employee employee)
+        {
+
+            employees.Remove(employee);
+        }
     }
 }
