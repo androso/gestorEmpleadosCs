@@ -57,7 +57,7 @@ namespace gestorEmpleados
             
             Employee employee = new Employee
             {
-                Id = employeeManagement.GetAllEmployees().Count + 1,
+                Id = new Random().Next(),
                 FullName = fullname,
                 Seniority = seniority,
                 BirthDate = birthdate

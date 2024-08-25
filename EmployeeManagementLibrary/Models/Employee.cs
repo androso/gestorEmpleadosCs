@@ -24,21 +24,21 @@ namespace EmployeeManagementLibrary.Models
             {
                 new Employee
                 {
-                    Id = 1,
+                    Id = new Random().Next(),
                     FullName = "John Viber",
                     BirthDate = new DateTime(1990, 1, 1),
                     Seniority = "Junior"
                 },
                 new Employee
                 {
-                    Id = 2,
+                    Id = new Random().Next(),
                     FullName = "Jane Doe",
                     BirthDate = new DateTime(1985, 2, 2),
                     Seniority = "Mid"
                 },
                 new Employee
                 {
-                    Id = 3,
+                    Id = new Random().Next(),
                     FullName = "Alice Smith",
                     BirthDate = new DateTime(1980, 3, 3),
                     Seniority = "Senior"
