@@ -9,23 +9,16 @@ namespace gestorEmpleados
         {
             InitializeComponent();
             employeeManagement = new EmployeeManagement();
-            employeesListBox.Items.AddRange(employeeManagement.GetAllEmployees().ToArray());
-            employeesListBox.DisplayMember = "FullName";
-            employeesListBox.ValueMember = "Id";
-            employeesListBox.SelectedIndex = 0;
-            employeesListBox.SelectedItem = employeesListBox.Items[0];
+            RefreshEmployeeList();
         }
-
+        
         private void newEmployeeButton_Click(object sender, EventArgs e)
         {
             NewEmployeeForm newEmployeeForm = new NewEmployeeForm(employeeManagement);
             DialogResult result = newEmployeeForm.ShowDialog();
             if (result == DialogResult.OK)
             {
-                employeesListBox.Items.Clear();
-                employeesListBox.Items.AddRange(employeeManagement.GetAllEmployees().ToArray());
-                 employeesListBox.SelectedIndex = 0;
-            employeesListBox.SelectedItem = employeesListBox.Items[0];
+                RefreshEmployeeList();
             }
         }
 
@@ -40,14 +33,26 @@ namespace gestorEmpleados
         {
             Employee selectedEmployee = (Employee)employeesListBox.SelectedItem;
             employeeManagement.DeleteEmployee(selectedEmployee);
-            employeesListBox.Items.Clear();
-            employeesListBox.Items.AddRange(employeeManagement.GetAllEmployees().ToArray());
+            RefreshEmployeeList();
         }
 
         private void viewEmployeeButton_Click(object sender, EventArgs e)
         {
             Employee selectedEmployee = (Employee)employeesListBox.SelectedItem;
             MessageBox.Show($"ID: {selectedEmployee.Id}\nNombre: {selectedEmployee.FullName}\nFecha de nacimiento: {selectedEmployee.BirthDate}\nAntigüedad: {selectedEmployee.Seniority}", "Información del empleado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void RefreshEmployeeList()
+        {
+            employeesListBox.Items.Clear();
+            employeesListBox.Items.AddRange(employeeManagement.GetAllEmployees().ToArray());
+            employeesListBox.DisplayMember = "FullName";
+            employeesListBox.ValueMember = "Id";
+            if (employeesListBox.Items.Count > 0)
+            {
+                employeesListBox.SelectedIndex = 0;
+                employeesListBox.SelectedItem = employeesListBox.Items[0];
+            }
         }
     }
 }

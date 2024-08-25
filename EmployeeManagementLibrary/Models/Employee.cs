@@ -58,7 +58,6 @@ namespace EmployeeManagementLibrary.Models
         
         public void DeleteEmployee(Employee employee)
         {
-
             employees.Remove(employee);
         }
     }
